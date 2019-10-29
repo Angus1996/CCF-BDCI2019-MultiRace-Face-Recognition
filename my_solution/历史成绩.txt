@@ -1,0 +1,31 @@
+[angusaha]_results_v1.scv:    直接用insight.app.face_analysis得到特征向量，没有检测到脸的图像，手动resize输入到model2，还是用的余弦相似度， 0.64536577000 
+
+[angusaha]_results_v2.csv:     直接用insight.app.face_analysis得到norm特征向量，没有检测到脸的图像，手动resize输入到model2，再用sklearn的库进行归一化，还是用的余弦相似度
+
+[angusaha]_results_v3.scv:    直接用insight.app.face_analysis得到特征向量，没有检测到脸的图像，手动resize输入到model2，用insight的计算方法，np.dot(feature_1, feature_2.T)
+
+[angusaha]_results_v4.csv:     直接用insight.app.face_analysis得到norm特征向量，没有检测到脸的图像，手动resize输入到model2，再用sklearn的库进行归一化，用insight的计算方法，np.dot(feature_1, feature_2.T)
+
+[angusaha]_results_v5.csv:   水平翻转，调用insight.app.face_analysis得到特征向量，没有检测到脸的图像，手动resize输入到model2，还是用的余弦相似度
+
+[angusaha]_results_v6.csv:   加入opencv gamma变换自动预处理图像， 水平翻转，调用insight.app.face_analysis得到特征向量，没有检测到脸的图像，手动resize输入到model2，还是用的余弦相似度   0.64547610000
+
+[angusaha]_results_v7.csv:   只对African\Indian opencv gamma变换自动预处理图像， 水平翻转，调用insight.app.face_analysis得到特征向量，没有检测到脸的图像，手动resize输入到model2，
+			还是用的余弦相似度   0.64546454000
+
+[angusaha]_results_v8.csv:   加入opencv gamma变换自动预处理图像， 水平翻转，图像锐化（4.0），调用insight.app.face_analysis得到特征向量，没有检测到脸的图像，
+手动resize输入到model2，还是用的余弦相似度   0.64570343
+
+[angusaha]_results_v9.csv:   加入opencv gamma变换自动预处理图像， 水平翻转，图像锐化（3.0），调用insight.app.face_analysis得到特征向量，没有检测到脸的图像，
+手动resize输入到model2，还是用的余弦相似度   0.64581352
+
+[angusaha]_results_v10.csv:   加入opencv gamma变换自动预处理图像， 水平翻转，图像锐化（3.0），调用insight.app.face_analysis得到特征向量，没有检测到脸的图像，
+手动resize输入到model2；不水平翻转再得到一遍特征向量；最后将两个512维的特征向量拼接成1024维特征向量，还是用的余弦相似度  0.64608097
+
+[angusaha]_results_v11.csv:   加入opencv gamma变换自动预处理图像， 水平翻转，图像锐化（3.0），调用insight.app.face_analysis得到特征向量，没有检测到脸的图像，
+手动resize输入到model2；不水平翻转再得到一遍特征向量；最后计算a-b，flip_a-flip_b的余弦距离的均值，0.64608604000 
+
+[angusaha]_results_v12.csv:   中值滤波， 水平翻转，图像锐化（3.0），调用insight.app.face_analysis得到特征向量，没有检测到脸的图像，手动resize输入到model2；
+不水平翻转再得到一遍特征向量；最后计算a-b，flip_a-flip_b的余弦距离的均值，0.64612472000
+TODO:
+调用deploy里面的模型
